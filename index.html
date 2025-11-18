@@ -1,70 +1,56 @@
-<!doctype html>
+ <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Saab Allround Services — Bouw & Afwerking</title>
-<meta name="description" content="Saab Allround Services - Professionele bouw- en afwerkingsdiensten in Nederland. Stucwerk, schilderwerk, tegelzetten, vloeren en sloopwerk.">
-<link rel="stylesheet" href="assets/style.css">
-  <meta property="og:title" content="Saab Allround Services — Bouw & Afwerking">
-<meta property="og:description" content="Saab Allround Services - Professionele bouw- en afwerkingsdiensten.">
-<meta property="og:image" content="https://your-domain.example/images/hero.jpg">
-  
-  <script type="application/ld+json">{'@context': 'https://schema.org', '@type': 'LocalBusiness', 'name': 'Saab Allround Services', 'url': 'https://your-domain.example/', 'logo': 'https://your-domain.example/images/logo.png', 'telephone': '+31612345678', 'email': 'info@saaballround.nl', 'address': {'@type': 'PostalAddress', 'addressLocality': 'Nederland', 'addressCountry': 'NL'}, 'description': 'Saab Allround Services - Bouw, stucwerk, schilderwerk, tegelzetten, vloeren en sloopwerk. Professionele afwerking en renovatie.'}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saab Allround Services</title>
+<style>
+body{margin:0;font-family:Arial}
+header{display:flex;justify-content:space-between;align-items:center;padding:10px 20px;background:#111;color:#fff;position:sticky;top:0;}
+nav ul{display:flex;gap:15px;list-style:none;margin:0;padding:0;}
+nav a{color:white;text-decoration:none;}
+.mobile-btn{display:none;font-size:28px;cursor:pointer;}
+@media(max-width:768px){
+ nav ul{display:none;flex-direction:column;background:#111;position:absolute;top:60px;right:0;width:200px;padding:10px;}
+ nav ul.show{display:flex;}
+ .mobile-btn{display:block;}
+}
+.hero{height:250px;background:#ccc;display:flex;justify-content:center;align-items:center;position:relative;}
+.services-box{position:absolute;bottom:20px;background:white;padding:10px 20px;border-radius:6px;cursor:pointer;}
+.services-list{display:none;flex-direction:column;gap:5px;position:absolute;bottom:60px;background:#fff;padding:10px;border-radius:6px;}
+.services-list.show{display:flex;}
+</style>
 </head>
 <body>
-  
-<header class="container header">
-  <div class="brand">
-    <img src="images/logo.png" alt="Saab Allround Services logo">
-    <div>
-      <h1>Saab Allround Services</h1>
-      <div class="note">Bouw • Stucwerk • Schilderwerk • Tegelzetten</div>
-    </div>
-  </div>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">Over ons</a>
-    <a href="services.html">Diensten</a>
-    <a href="gallery.html">Galerij</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<header>
+ <div class="logo"><a href="index.html" style="color:white;text-decoration:none;font-weight:bold;">Saab Allround</a></div>
+ <span class="mobile-btn" onclick="toggleMenu()">☰</span>
+ <nav>
+   <ul id="menu">
+     <li><a href="index.html">Home</a></li>
+     <li><a href="services.html">Diensten</a></li>
+     <li><a href="gallery.html">Gallery</a></li>
+     <li><a href="contact.html">Contact</a></li>
+   </ul>
+ </nav>
 </header>
-<main>
-  <section class="hero">
-    <div class="hero-card">
-      <h2>Uw betrouwbare partner in bouw en afwerking</h2>
-      <p>Professionele kwaliteit, moderne technieken en betrouwbare uitvoering — wij brengen onze internationale expertise naar uw project in Nederland.</p>
-      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-        <a class="btn btn-primary" href="services.html">Onze Diensten</a>
-        <a class="btn btn-outline" href="contact.html">Vraag een offerte aan</a>
-      </div>
-    </div>
-  </section>
 
-  <section class="section">
-    <h3>Waarom Saab Allround Services?</h3>
-    <div class="grid">
-      <div class="card"><h4>Internationale ervaring</h4><p>Jarenlange ervaring in Dubai en Saudi-Arabië met grote projecten en hoge kwaliteitsstandaarden.</p></div>
-      <div class="card"><h4>Duurzaamheid</h4><p>Wij adviseren duurzame materialen en werken volgens milieuvriendelijke praktijken.</p></div>
-      <div class="card"><h4>Betrouwbaarheid</h4><p>Heldere offertes, strakke planning en nette uitvoering — uw tevredenheid staat voorop.</p></div>
-      <div class="card"><h4>Veiligheid</h4><p>Professionele uitvoering met aandacht voor veiligheid en wetgeving.</p></div>
-    </div>
-  </section>
+<section class="hero">
+ <div class="services-box" onclick="toggleServices()">Bekijk Diensten</div>
+ <div class="services-list" id="servicesList">
+  <a href="service-stukadoorswerk.html">Stukadoorswerk</a>
+  <a href="service-schilderwerk.html">Schilderwerk</a>
+  <a href="service-tegelzetten.html">Tegelzetten</a>
+  <a href="service-sloopwerk.html">Sloopwerk</a>
+ </div>
+</section>
 
-  <section class="section">
-    <h3>Topdiensten</h3>
-    <div class="grid">
-      <div class="card"><h4>Stukadoorswerk</h4><p>Strak stucwerk voor wanden en plafonds — reparatie en afwerking.</p><a href="service-stukadoorswerk.html" class="note">Lees meer →</a></div>
-      <div class="card"><h4>Schilderwerk</h4><p>Binnen en buiten schilderwerk met duurzame verf en nauwkeurige afwerking.</p></div>
-      <div class="card"><h4>Tegelzetten</h4><p>Waterdichte ondergrond en hoogwaardige afwerking voor badkamers en keukens.</p></div>
-      <div class="card"><h4>Houten vloeren & PVC</h4><p>Professionele plaatsing en advies over de beste vloeren voor uw ruimte.</p></div>
-    </div>
-  </section>
-</main>
-<footer class="footer">© 2025 Saab Allround Services — Bouw & Afwerking in Nederland</footer>
-<a id="whatsapp-btn" href="https://wa.me/31612345678?text=Hallo%20Saab%20Allround%20Services,%20ik%20wil%20informatie" target="_blank" style="position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;padding:12px 14px;border-radius:50px;box-shadow:0 10px 30px rgba(0,0,0,0.4);font-weight:700">WhatsApp</a>
-
-  <script src="assets/script.js"></script>
+<script>
+function toggleMenu(){
+ document.getElementById('menu').classList.toggle('show');
+}
+function toggleServices(){
+ document.getElementById('servicesList').classList.toggle('show');
+}
+</script>
 </body>
 </html>
