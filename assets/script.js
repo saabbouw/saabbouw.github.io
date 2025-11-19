@@ -25,3 +25,7 @@
   if(lb){ lb.addEventListener('click', ()=> lb.classList.remove('show')); }
 
 })();
+function toggleMobileMenu(){
+  document.getElementById("mobileNav").classList.toggle("show");
+}
+
