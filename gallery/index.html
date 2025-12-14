@@ -1,44 +1,90 @@
-<!doctype html>
+ <!doctype html>
 <html lang="nl">
 <head>
   <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Galerij — Saab Bouw Services</title>
-<meta name="description" content="Saab Bouw Services - Professionele bouw- en afwerkingsdiensten in Nederland. Stucwerk, schilderwerk, tegelzetten, vloeren en sloopwerk.">
-<link rel="stylesheet" href="assets/style.css">
-  <meta property="og:title" content="Galerij — Saab Bouw Services">
-<meta property="og:description" content="Saab Bouw Services - Professionele bouw- en afwerkingsdiensten.">
-<meta property="og:image" content="https://your-domain.example/images/hero.jpg">
-  
-  <script type="application/ld+json">{'@context': 'https://schema.org', '@type': 'LocalBusiness', 'name': 'Saab Bouw Services', 'url': 'https://your-domain.example/', 'logo': 'https://your-domain.example/images/logo.png', 'telephone': '+31612345678', 'email': 'info@saabbouw.nl', 'address': {'@type': 'PostalAddress', 'addressLocality': 'Nederland', 'addressCountry': 'NL'}, 'description': 'Saab Bouw Services - Bouw, stucwerk, schilderwerk, tegelzetten, vloeren en sloopwerk. Professionele afwerking en renovatie.'}</script>
-</head>
-<body>
-  
-<header class="container header"><div class="brand">
-    <a href="https://www.saabbouw.nl/">
-        <img src="images/logo.png">
-        <h1>Saab Bouw Services</h1>
-    </a>
-</div>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <nav class="nav"><a href="https://www.saabbouw.nl/">Home</a><a href="about.html">Over ons</a><a href="services.html">Diensten</a><a href="contact.html">Contact</a></nav>
+  <title>Galerij — Saab Bouw Services</title>
+  <meta name="description" content="Bekijk onze galerij met afgeronde bouw- en renovatieprojecten van Saab Bouw Services in Nederland.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Galerij — Saab Bouw Services">
+  <meta property="og:description" content="Bekijk afgeronde projecten van Saab Bouw Services.">
+  <meta property="og:image" content="https://www.saabbouw.nl/images/hero.jpg">
+  <meta property="og:url" content="https://www.saabbouw.nl/gallery/">
+  <meta property="og:type" content="website">
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Saab Bouw Services",
+    "url": "https://www.saabbouw.nl/",
+    "logo": "https://www.saabbouw.nl/images/logo.png",
+    "telephone": "+31612345678",
+    "email": "info@saabbouw.nl",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nederland",
+      "addressCountry": "NL"
+    },
+    "description": "Saab Bouw Services - Bouw, stucwerk, schilderwerk, tegelzetten, vloeren en sloopwerk. Professionele afwerking en renovatie."
+  }
+  </script>
+</head>
+
+<body>
+
+<!-- Header -->
+<header class="container header">
+  <div class="brand">
+    <a href="/">
+      <img src="/images/logo.png" alt="Saab Bouw Services logo">
+      <h1>Saab Bouw Services</h1>
+    </a>
+  </div>
+
+  <nav class="nav">
+    <a href="/">Home</a>
+    <a href="/about/">Over ons</a>
+    <a href="/services/">Diensten</a>
+    <a href="/contact/">Contact</a>
+  </nav>
 </header>
+
+<!-- Main -->
 <main>
   <section class="section container">
     <h3>Galerij</h3>
+
     <div class="gallery-grid">
-      <a href="#" data-src="images/gallery1.jpg"><img src="images/gallery1_thumb.jpg" alt="project"></a>
-      <a href="#" data-src="images/gallery2.jpg"><img src="images/gallery2_thumb.jpg" alt="project"></a>
-      <a href="#" data-src="images/gallery3.jpg"><img src="images/gallery3_thumb.jpg" alt="project"></a>
-      <a href="#" data-src="images/gallery4.jpg"><img src="images/gallery4_thumb.jpg" alt="project"></a>
-      <a href="#" data-src="images/gallery5.jpg"><img src="images/gallery5_thumb.jpg" alt="project"></a>
-      <a href="#" data-src="images/gallery6.jpg"><img src="images/gallery6_thumb.jpg" alt="project"></a>
+      <a href="#" data-src="/images/gallery1.jpg"><img src="/images/gallery1_thumb.jpg" alt="Bouwproject 1"></a>
+      <a href="#" data-src="/images/gallery2.jpg"><img src="/images/gallery2_thumb.jpg" alt="Bouwproject 2"></a>
+      <a href="#" data-src="/images/gallery3.jpg"><img src="/images/gallery3_thumb.jpg" alt="Bouwproject 3"></a>
+      <a href="#" data-src="/images/gallery4.jpg"><img src="/images/gallery4_thumb.jpg" alt="Bouwproject 4"></a>
+      <a href="#" data-src="/images/gallery5.jpg"><img src="/images/gallery5_thumb.jpg" alt="Bouwproject 5"></a>
+      <a href="#" data-src="/images/gallery6.jpg"><img src="/images/gallery6_thumb.jpg" alt="Bouwproject 6"></a>
     </div>
   </section>
 </main>
-<div class="lightbox" id="lightbox"><img src="" alt="preview"></div>
-<footer class="footer">© 2025 Saab Bouw Services</footer>
 
-  <script src="assets/script.js"></script>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="Project preview">
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  © 2025 Saab Bouw Services
+</footer>
+
+<!-- Scripts -->
+<script src="/assets/script.js"></script>
+
 </body>
 </html>
+
