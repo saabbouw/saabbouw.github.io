@@ -93,8 +93,15 @@ img{max-width:100%;display:block}
   }
 }
 
-/* إصلاح ظهور قائمة الموبايل */
+/* قائمة الموبايل */
 @media(max-width:900px){
+  .mobile-menu-btn{
+    display:block;
+    font-size:32px;
+    cursor:pointer;
+    color:var(--accent);
+  }
+
   .nav {
     display: none; /* إخفاء القائمة افتراضياً */
     flex-direction: column;
@@ -111,10 +118,11 @@ img{max-width:100%;display:block}
   }
 
   .nav.show {
-    display: flex !important;
+    display: flex !important; /* تظهر عند الضغط على الزر */
   }
 
-  .mobile-menu-btn {
-    display: block;
+  .nav a {
+    margin: 12px 0;
+    font-size: 16px;
   }
 }
