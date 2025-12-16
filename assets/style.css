@@ -439,3 +439,107 @@ a{color:inherit;text-decoration:none}
   .gallery-grid img{height:160px}
 }
 
+/* Cinematic double-row gallery (Home) */
+.cinematic-gallery{
+  position:relative;
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow2);
+  overflow:hidden;
+  padding:14px;
+  background:linear-gradient(180deg, rgba(255,255,255,.70), rgba(255,255,255,.35));
+}
+
+.cinematic-gallery::before,
+.cinematic-gallery::after{
+  content:"";
+  position:absolute;
+  top:0;bottom:0;
+  width:110px;
+  pointer-events:none;
+  z-index:3;
+}
+.cinematic-gallery::before{
+  left:0;
+  background:linear-gradient(90deg, var(--bg), rgba(255,255,255,0));
+}
+.cinematic-gallery::after{
+  right:0;
+  background:linear-gradient(270deg, var(--bg), rgba(255,255,255,0));
+}
+
+.cine-row{
+  overflow:hidden;
+}
+.cine-row + .cine-row{ margin-top:12px; }
+
+.cine-track{
+  display:flex;
+  gap:14px;
+  width:max-content;
+  will-change:transform;
+}
+
+.cine-item{
+  flex:0 0 auto;
+  width:260px;
+  height:160px;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:var(--card);
+  box-shadow:0 12px 26px rgba(0,0,0,.10);
+  transform:translateZ(0);
+}
+
+.cine-row-1 .cine-item:nth-child(odd){ transform:rotate(-1.2deg) }
+.cine-row-1 .cine-item:nth-child(even){ transform:rotate(1.2deg) }
+.cine-row-2 .cine-item:nth-child(odd){ transform:rotate(1.0deg) }
+.cine-row-2 .cine-item:nth-child(even){ transform:rotate(-1.0deg) }
+
+.cine-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .45s ease, filter .45s ease;
+  filter:saturate(1.06) contrast(1.05);
+}
+.cine-item:hover img{
+  transform:scale(1.08);
+  filter:saturate(1.14) contrast(1.08);
+}
+
+/* Animations */
+.cine-row-1 .cine-track{
+  animation: cineLeft 28s linear infinite;
+}
+.cine-row-2 .cine-track{
+  animation: cineRight 32s linear infinite;
+}
+
+@keyframes cineLeft{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-50%); }
+}
+@keyframes cineRight{
+  from{ transform:translateX(-50%); }
+  to{ transform:translateX(0); }
+}
+
+/* Pause on hover (desktop) */
+@media (hover:hover){
+  .cinematic-gallery:hover .cine-track{ animation-play-state: paused; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .cine-track{ animation:none !important; }
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .cine-item{ width:220px; height:145px; }
+  .cine-row-1 .cine-track{ animation-duration:22s; }
+  .cine-row-2 .cine-track{ animation-duration:26s; }
+}
+
