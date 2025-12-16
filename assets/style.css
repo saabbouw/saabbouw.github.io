@@ -222,7 +222,7 @@ a{color:inherit;text-decoration:none}
 
 /* About */
 .about p{
-  color:#d7e0f2;
+  color:var(--muted);
   line-height:1.85;
   margin-bottom:14px;
 }
