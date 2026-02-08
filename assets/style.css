@@ -542,4 +542,14 @@ a{color:inherit;text-decoration:none}
   .cine-row-1 .cine-track{ animation-duration:22s; }
   .cine-row-2 .cine-track{ animation-duration:26s; }
 }
+.service-image{
+  margin-bottom:24px;
+}
+
+.service-image img{
+  width:100%;
+  height:auto;
+  border-radius:12px;
+  display:block;
+}
 
