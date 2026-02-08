@@ -552,4 +552,22 @@ a{color:inherit;text-decoration:none}
   border-radius:12px;
   display:block;
 }
+/* === FIX: text not readable in HOME cards only === */
+
+/* الإعداد الافتراضي لكل الكروت (صفحات الخدمات) */
+.card{
+  color: var(--text);
+  --card-p: var(--muted);
+}
+
+.card p{
+  color: var(--card-p);
+  line-height: 1.75;
+}
+
+/* كروت الهوم (خلفية غامقة) */
+.home .card{
+  --card-p: rgba(255,255,255,.75);
+}
+
 
